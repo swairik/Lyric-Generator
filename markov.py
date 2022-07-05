@@ -31,7 +31,7 @@ def getNextCharacter(model, fragment):
         global ErrorsFound 
         ErrorsFound += 1
     # print(words)
-    return chr(random.randrange(26) + ord('a'))         # safety net // shouldn't reach here if sample size is big enough
+    return random.choice(list(model))                       # safety net // shouldn't reach here if sample size is big enough
 
 def generateText(text, order, length):
     model = generateModel(text, order)
